@@ -1,0 +1,21 @@
+---
+entity: bsc
+project_name: bsy
+sub_project: 
+
+kafka_brokers_plaintext: ${com_app-CP-KafkaBrokers_Plaintext}
+kafka_brokers_sasl_plaintext: ${com_app-CP-KafkaBrokers_SASLPlaintext}
+kafka_brokers_sasl_ssl: ${com_app-CP-KafkaBrokers_SASLSSL}
+kafka_brokers_ssl: ${com_app-CP-KafkaBrokers_SSL}
+
+
+hadoop_configuration_resources: /etc/hadoop/conf/core-site.xml, /etc/hadoop/conf/hdfs-site.xml
+kerberos_principal: bsypdadm@DDHAD
+kerberos_keytab: /etc/security/keytabs/bsypdadm.DDHAD.applicatif.keytab
+
+is_plaintext: yes
+is_sasl_plaintext: no
+is_sasl_ssl: no
+is_ssl: no
+
+

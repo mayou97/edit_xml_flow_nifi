@@ -1,0 +1,37 @@
+---
+  - hosts: localhost
+    vars_files:
+      - ./vars/vars_conf.yml
+
+
+    tasks:
+
+      - name: Ansible replace entity
+        replace:
+          path: ./files/template_nifi.xml
+          regexp: "{entity}"
+          replace: "{{ entity }}"
+
+      - name: Ansible replace project name
+        replace:
+          path: ./files/template_nifi.xml
+          regexp: "{project_name}"
+          replace: "{{ project_name }}"
+
+      - name: Ansible replace _{sub_project}_
+        replace:
+          path: ./files/template_nifi.xml
+          regexp: "_{sub_project}_"
+          replace: "_"
+        
+      - name: Ansible replace sub_project
+        replace:
+          path: ./files/template_nifi.xml
+          regexp: "{sub_project}"
+        when:  sub_project == ""
+
+      - name: Ansible replace sub_project
+        replace:
+          path: ./files/template_nifi.xml
+          regexp: "{sub_project}"
+        when:  sub_project != ""
