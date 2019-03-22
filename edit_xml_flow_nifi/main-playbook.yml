@@ -12,11 +12,11 @@
           regexp: "{entity}"
           replace: "{{ entity }}"
 
-      - name: Ansible replace project name
+      - name: Ansible replace trigram
         replace:
           path: ./files/template_nifi.xml
-          regexp: "{project_name}"
-          replace: "{{ project_name }}"
+          regexp: "{trigram}"
+          replace: "{{ trigram }}"
 
       - name: Ansible replace _{sub_project}_
         replace:
@@ -35,3 +35,52 @@
           path: ./files/template_nifi.xml
           regexp: "{sub_project}"
         when:  sub_project != ""
+
+      - name: Ansible replace Kerberos name
+        replace:
+          path: ./files/template_nifi.xml
+          regexp: "{kerberos_principal}"
+          replace: "{{ kerberos_principal }}"  
+
+      - name: Ansible replace Kerberos Keytab
+        replace:
+          path: ./files/template_nifi.xml
+          regexp: "{kerberos_keytab}"
+          replace: "{{ kerberos_keytab }}"
+
+      - name: Ansible replace Path Hdfs
+        replace:
+          path: ./files/template_nifi.xml
+          regexp: "{path_hdfs}"
+          replace: "{{ path_hdfs }}"
+
+
+      - name: Ansible replace Topic Name
+        replace:
+          path: ./files/template_nifi.xml
+          regexp: "{topic}"
+          replace: "{{ topic}}"
+
+
+      - name: Ansible replace Es Url
+        replace:
+          path: ./files/template_nifi.xml
+          regexp: "{es_url}"
+          replace: "{{ es_url }}"
+      - name: Ansible replace Es Index
+        replace:
+          path: ./files/template_nifi.xml
+          regexp: "{es_index}"
+          replace: "{{ es_index }}"
+
+      - name: Ansible replace Es User
+        replace:
+          path: ./files/template_nifi.xml
+          regexp: "{es_user}"
+          replace: "{{ es_user }}"
+
+      - name: Ansible replace Kafka Brokers
+        replace:
+          path: ./files/template_nifi.xml
+          regexp: "{kafka_brokers}"
+          replace: "{{ kafka_brokers }}"

@@ -149,7 +149,7 @@
                 <yieldDuration>1 sec</yieldDuration>
             </config>
             <executionNodeRestricted>false</executionNodeRestricted>
-            <name>{entity}-{project_name}_{sub_project}_GenerateFlowFile</name>
+            <name>titi3-{project_name}_GenerateFlowFile</name>
             <relationships>
                 <autoTerminate>false</autoTerminate>
                 <name>success</name>
@@ -178,7 +178,8 @@
                     <entry>
                         <key>Cluster Name</key>
                         <value>
-                            <name>Cluster Name</name>
+                       <name>titi3_titi1_titi4_titi6_titi5_titi7_titi11_titi8_titi9_titi10</name>
+
                         </value>
                     </entry>
                     <entry>
@@ -324,7 +325,7 @@
                 <yieldDuration>1 sec</yieldDuration>
             </config>
             <executionNodeRestricted>false</executionNodeRestricted>
-            <name>{entity}-{project_name}-{sub_project}PutElasticsearch</name>
+            <name>titi3-{project_name}-PutElasticsearch</name>
             <relationships>
                 <autoTerminate>true</autoTerminate>
                 <name>failure</name>
@@ -641,7 +642,7 @@
                 <yieldDuration>1 sec</yieldDuration>
             </config>
             <executionNodeRestricted>false</executionNodeRestricted>
-            <name>{entity}-{project_name}-{sub_project}InvokeHTTP</name>
+            <name>titi3-{project_name}-InvokeHTTP</name>
             <relationships>
                 <autoTerminate>true</autoTerminate>
                 <name>Failure</name>
